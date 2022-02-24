@@ -1,4 +1,4 @@
-import { Header } from 'components';
+import { Header, Dashboard } from 'components';
 
 import './global.scss';
 
@@ -7,6 +7,7 @@ export function App() {
     <>
       <Header />
       <div className='app__container'>
+        <Dashboard />
         <h1>App</h1>
       </div>
     </>
