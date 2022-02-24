@@ -1,4 +1,5 @@
-import React from 'react';
+import { NewLogBtn } from 'components';
+
 import styles from './styles.module.scss';
 
 export function Header() {
@@ -11,7 +12,7 @@ export function Header() {
 
         <p className={styles.header__user}>Welcome</p>
 
-        <button>New Log</button>
+        <NewLogBtn />
       </div>
     </header>
   );
