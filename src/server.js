@@ -25,7 +25,7 @@ export function server() {
       this.namespace = 'api/v1/';
 
       this.get('/logs', () => {
-        return this.schema.all('transaction');
+        return this.schema.all('logs');
       });
 
       this.post('/logs', (schema, request) => {
