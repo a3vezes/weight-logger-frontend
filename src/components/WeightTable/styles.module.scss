@@ -1,0 +1,24 @@
+$table-text: #969cb3;
+$table-title: #363f5f;
+
+.table {
+  width: 100%;
+  color: $table-title;
+  border-spacing: 0 0.5rem;
+  margin-top: 2rem;
+
+  th {
+    font-weight: 400;
+    padding: 1rem 2rem;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+
+  td {
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: 0;
+    background: #fff;
+    border-radius: 0.25rem;
+  }
+}
