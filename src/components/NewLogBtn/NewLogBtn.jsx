@@ -1,5 +1,9 @@
 import styles from './styles.module.scss';
 
-export function NewLogBtn() {
-  return <button className={styles.NewLogBtn}>New Log</button>;
+export function NewLogBtn({ toggleModal }) {
+  return (
+    <button className={styles.NewLogBtn} onClick={() => toggleModal()}>
+      New Log
+    </button>
+  );
 }

@@ -1,0 +1,76 @@
+.modal {
+  h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 0 1.5rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+    border: 1px solid #d7d7d7;
+    background: #e7e9ee;
+    font-weight: 400;
+    font-size: 1rem;
+    &::placeholder {
+      color: #363f5f;
+    }
+    & + input {
+      margin-top: 1rem;
+    }
+  }
+
+  button[type='submit'] {
+    width: 100%;
+    padding: 0 1.5rem;
+    height: 4rem;
+    background: #333;
+    color: #fff;
+    border-radius: 0.25rem;
+    border: 0;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    transition: filter 0.2s;
+    &:hover {
+      background-color: lighten($color: #333, $amount: 5);
+    }
+  }
+}
+
+.modal__overlay {
+  background: rgba(0, 0, 0, 0.5);
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__content {
+  width: 100%;
+  max-width: 576px;
+  background: #f0f2f5;
+  padding: 3rem;
+  position: relative;
+  border-radius: 0.25rem;
+}
+
+.modal__close {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  border: 0;
+  background: transparent;
+  transition: filter 0.2s;
+  &:hover {
+    filter: brightness(0.8);
+  }
+}

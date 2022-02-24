@@ -2,7 +2,7 @@ import { NewLogBtn } from 'components';
 
 import styles from './styles.module.scss';
 
-export function Header() {
+export function Header({ toggleModal }) {
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
@@ -12,7 +12,7 @@ export function Header() {
 
         <p className={styles.header__user}>Welcome</p>
 
-        <NewLogBtn />
+        <NewLogBtn toggleModal={toggleModal} />
       </div>
     </header>
   );
