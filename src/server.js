@@ -11,12 +11,12 @@ export function server() {
           {
             id: 1,
             weight: 90,
-            createdAt: new Date('2022-01-11'),
+            createdAt: Date.now(),
           },
           {
             id: 2,
             weight: 89,
-            createdAt: new Date('2022-01-12'),
+            createdAt: Date.now(),
           },
         ],
       });

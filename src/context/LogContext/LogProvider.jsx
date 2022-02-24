@@ -10,11 +10,13 @@ export function LogProvider({ children }) {
     async function getLogs() {
       const { data } = await api.get('logs');
 
-      setLogs(data);
+      setLogs(data.logs);
     }
 
     getLogs();
   }, []);
 
-  return <LogContext.Provider value={{ logs }}>{children}</LogContext.Provider>;
+  return (
+    <LogContext.Provider value={{ logs: logs }}>{children}</LogContext.Provider>
+  );
 }

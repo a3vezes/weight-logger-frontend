@@ -1,6 +1,11 @@
+import { useContext } from 'react';
+import { LogContext } from 'context/LogContext/logContext';
+
 import styles from './styles.module.scss';
 
 export function WeightTable() {
+  const { logs } = useContext(LogContext);
+
   return (
     <table className={styles.table}>
       <thead>
@@ -11,21 +16,13 @@ export function WeightTable() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>80</td>
-          <td>1.0</td>
-          <td>01/01/2022</td>
-        </tr>
-        <tr>
-          <td>80</td>
-          <td>1.0</td>
-          <td>01/01/2022</td>
-        </tr>
-        <tr>
-          <td>80</td>
-          <td>1.0</td>
-          <td>01/01/2022</td>
-        </tr>
+        {logs.map((log) => (
+          <tr key={log.id}>
+            <td>{log.weight}</td>
+            <td>{log.weight}</td>
+            <td>{new Intl.DateTimeFormat('pt-BR').format(log.createdAt)}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
