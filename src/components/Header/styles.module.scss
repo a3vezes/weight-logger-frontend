@@ -1,0 +1,31 @@
+$gray: #c4c4c4;
+
+.header {
+  background-color: $gray;
+
+  padding-top: 1.5rem;
+  padding-bottom: 10rem;
+}
+
+.header__container {
+  max-width: 768px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  font-weight: bolder;
+  cursor: default;
+}
+
+.header__span {
+  color: #fff;
+}
+
+.header__user {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

@@ -1,6 +1,4 @@
-:root {
-  --background: #f0f2f5;
-}
+$background: #f0f2f5;
 
 *,
 *::after,
@@ -21,7 +19,7 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: $background;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
