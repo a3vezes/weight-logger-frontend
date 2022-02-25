@@ -13,11 +13,6 @@ export function server() {
             weight: 90,
             createdAt: Date.now(),
           },
-          {
-            id: 2,
-            weight: 89,
-            createdAt: Date.now(),
-          },
         ],
       });
     },

@@ -1,25 +1,31 @@
+import { useState, useContext } from 'react';
+import { LogContext } from 'context/LogContext/logContext';
 import Modal from 'react-modal';
 
 import styles from './styles.module.scss';
 import close from 'assets/close.svg';
-import { useState } from 'react';
 
 Modal.setAppElement('#root');
 
 export function NewLogModal({ modalIsOpen, toggleModal }) {
+  const { addNewLog } = useContext(LogContext);
+
   const [weight, setWeight] = useState(null);
   const [goal, setGoal] = useState(null);
 
-  function handleCreateNewLog(event) {
+  async function handleCreateNewLog(event) {
     event.preventDefault();
 
+    addNewLog({
+      weight,
+    });
+
     setWeight(null);
-    setGoal(null);
+    toggleModal();
   }
   return (
     <Modal
       isOpen={modalIsOpen}
-      onRequestClose={toggleModal}
       overlayClassName={styles.modal__overlay}
       className={styles.modal}
     >

@@ -16,7 +16,18 @@ export function LogProvider({ children }) {
     getLogs();
   }, []);
 
+  async function addNewLog(log) {
+    const { data } = await api.post('/logs', {
+      ...log,
+      createdAt: Date.now(),
+    });
+
+    setLogs((logs) => [...logs, data.log]);
+  }
+
   return (
-    <LogContext.Provider value={{ logs: logs }}>{children}</LogContext.Provider>
+    <LogContext.Provider value={{ logs, addNewLog }}>
+      {children}
+    </LogContext.Provider>
   );
 }
