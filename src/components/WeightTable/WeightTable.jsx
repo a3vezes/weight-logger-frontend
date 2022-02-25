@@ -20,7 +20,8 @@ export function WeightTable() {
           <tr key={log.id}>
             <td>{log.weight}</td>
             <td>{log.weight}</td>
-            <td>{new Intl.DateTimeFormat('pt-BR').format(log.createdAt)}</td>
+            <td>{new Intl.DateTimeFormat('pt-BR').format(log.date)}</td>
+            {/* <td>{log.date}</td> */}
           </tr>
         ))}
       </tbody>

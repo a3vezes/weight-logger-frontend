@@ -12,6 +12,7 @@ export function NewLogModal({ modalIsOpen, toggleModal }) {
 
   const [weight, setWeight] = useState(null);
   const [goal, setGoal] = useState(null);
+  const [date, setDate] = useState(Date.now());
 
   async function handleCreateNewLog(event) {
     event.preventDefault();
@@ -21,6 +22,7 @@ export function NewLogModal({ modalIsOpen, toggleModal }) {
     });
 
     setWeight(null);
+
     toggleModal();
   }
   return (
@@ -45,6 +47,13 @@ export function NewLogModal({ modalIsOpen, toggleModal }) {
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
           />
+
+          {/* 
+          <input
+            type='date'
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          /> */}
 
           <input
             type='number'
